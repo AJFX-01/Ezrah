@@ -6,3 +6,5 @@ class Configs {
     static PORT = parseInt(process.env.PORT || '4000', 10);
     static CACHE_MAX_SIZE = parseInt(process.env.CACHE_MAX_SIZE || '100', 10);
 }
+
+export default Configs;

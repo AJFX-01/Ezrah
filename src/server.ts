@@ -4,6 +4,7 @@ import typeDefs from './types/schema';
 import resolvers from './resolver';
 import CoinMarketCapDataSource from './api';
 import { ApolloServer } from 'apollo-server-express';
+import Configs from './config';
 
 if (!Configs.API_KEY) {
     console.error('Error: COINMARKETCAP_API_KEY is not set in .env file.');

@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import LFUCache from "./lfuCache";
 import { ListingResponse, Cryptocurrency } from "./types";
+import Configs from "./config";
 
 
 class CoinMarketCapDataSource {
