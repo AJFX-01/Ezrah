@@ -69,3 +69,5 @@ class LFUCache<T> {
         }
     }
 }
+
+export default LFUCache;
