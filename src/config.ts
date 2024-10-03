@@ -1,4 +1,5 @@
 // Load environment variables
+require('dotenv').config();
 
 class Configs {
     static API_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
