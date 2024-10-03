@@ -48,3 +48,8 @@ export interface ListingResponse {
     data: Cryptocurrency[];
     status: Status;
 }
+
+export interface CacheEntry<T> {
+    value: T;
+    frequency: number;
+  }
