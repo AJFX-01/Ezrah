@@ -1,3 +1,5 @@
+import CoinMarketCapDataSource from "../api";
+
 export interface Quote {
     price: number;
     volume_24h: number;
@@ -53,3 +55,9 @@ export interface CacheEntry<T> {
     value: T;
     frequency: number;
   }
+
+export interface Context {
+    dataSources: {
+        api: CoinMarketCapDataSource;
+    };
+}

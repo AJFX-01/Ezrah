@@ -1,18 +1,40 @@
 import express, { Application } from 'express'
-import axios, { AxiosResponse } from 'axios'
-import LFUCache from './lfuCache'
-import { Cryptocurrency, ListingResponse } from './types'
+import { Context } from './types'
+import typeDefs from './types/schema';
+import resolvers from './resolver';
+import CoinMarketCapDataSource from './api';
+import { ApolloServer } from 'apollo-server-express';
 
-
-const API_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
-const API_KEY = process.env.COINMARKETCAP_API_KEY;
-const PORT = parseInt(process.env.PORT || '4000', 10);
-const CACHE_MAX_SIZE = parseInt(process.env.CACHE_MAX_SIZE || '100', 10);
-
-if (!API_KEY) {
+if (!Configs.API_KEY) {
     console.error('Error: COINMARKETCAP_API_KEY is not set in .env file.');
     process.exit(1);
 }
 
 
-  
+const startServer = async (): Promise<void> => {
+    const app: Application = express();
+
+    const server = new ApolloServer({
+        typeDefs,
+        resolvers,
+        context: (): Context => ({
+            dataSources: {
+                api: new CoinMarketCapDataSource(),
+            },
+        }),
+    });
+
+    await server.start();
+    server.applyMiddleware({ app, path: '/graphql' });
+
+    app.listen({ port: Configs.PORT }, () => {
+        console.log(`Server running at http://localhost:${Configs.PORT}${server.graphqlPath}`);
+    });
+};
+
+// Start the server
+startServer().catch((error) => {
+    console.error('Error starting server:', error);
+});
+
+
