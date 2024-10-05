@@ -2,9 +2,9 @@ import { Context, Cryptocurrency } from "./types";
 
 const resolvers = {
     Query: {
-        getCryptocurrency: async (_: any, args: { id: number }, context: Context): Promise<Cryptocurrency | null> => {
-            return await context.dataSources.api.getCryptocurrency(args.id);
-        },
+        // getCryptocurrency: async (_: any, args: { id: number }, context: Context): Promise<Cryptocurrency | null> => {
+        //     return await context.dataSources.api.getCryptocurrency(args.id);
+        // },
         getAllCryptocurrencies: async (
             _: any,
             args: { start?: number; limit?: number },

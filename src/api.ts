@@ -50,10 +50,10 @@ class CoinMarketCapDataSource {
     }
 
     // Get a single cryptocurrency by ID
-    async getCryptocurrency(id: number): Promise<Cryptocurrency | null> {
-        const data = await this.fetchAPI(Configs.API_URL, { id });
-        return data.data.find((crypto) => crypto.id === id) || null;
-    }
+    // async getCryptocurrency(id: number): Promise<Cryptocurrency | null> {
+    //     const data = await this.fetchAPI(Configs.API_URL, { id });
+    //     return data.data.find((crypto) => crypto.id === id) || null;
+    // }
 
     // Get all cryptocurrencies with pagination
     async getAllCryptocurrencies(start: number, limit: number): Promise<Cryptocurrency[]> {
