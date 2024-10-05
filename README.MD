@@ -57,7 +57,7 @@ Before setting up the project, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/graphql-coinmarketcap-server.git
+   git clone .git
    cd graphql-coinmarketcap-server
 
 
@@ -66,8 +66,8 @@ Before setting up the project, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/graphql-coinmarketcap-server.git
-   cd graphql-coinmarketcap-server
+   git clone https://github.com/AJFX-01/Ezrah.git
+   cd Ezrah
    ```
 
 2. **Install Dependencies**
