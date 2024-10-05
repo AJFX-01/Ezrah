@@ -59,6 +59,15 @@ Before setting up the project, ensure you have the following installed:
    ```bash
    git clone https://github.com/your-username/graphql-coinmarketcap-server.git
    cd graphql-coinmarketcap-server
+
+
+## Installation
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/your-username/graphql-coinmarketcap-server.git
+   cd graphql-coinmarketcap-server
    ```
 
 2. **Install Dependencies**
@@ -348,11 +357,9 @@ graphql-coinmarketcap-server/
 │   ├── types/
 │   │   └── index.ts
 │   ├── lfuCache.ts
-│   ├── schema.ts
+│   ├── resolver.ts
 │   └── server.ts
-├── tests/
-│   ├── getAllCryptocurrencies.test.ts
-│   └── ...other tests
+|    
 ├── .env
 ├── .gitignore
 ├── package.json
@@ -524,5 +531,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 **Your Name** – [your.email@example.com](mailto:your.email@example.com)
 
-Project Link: [https://github.com/your-username/graphql-coinmarketcap-server](https://github.com/your-username/graphql-coinmarketcap-server)
+Project Link: [https://github.com/AJFX-01/Ezrah/](https://github.com/AJFX-01/Ezrah/)
 ```
